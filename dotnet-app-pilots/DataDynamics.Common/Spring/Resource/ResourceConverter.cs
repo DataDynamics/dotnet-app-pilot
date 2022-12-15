@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel;
 using System.Globalization;
-using DataDynamics.Common.Utils;
+using DataDynamics.Common.Spring.Utils;
 using log4net;
 
 namespace DataDynamics.Common.Spring.Resources;

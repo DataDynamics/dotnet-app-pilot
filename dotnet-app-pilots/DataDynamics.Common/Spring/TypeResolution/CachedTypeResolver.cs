@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Specialized;
+using DataDynamics.Common.Spring.Utils;
 
 namespace DataDynamics.Common.Spring.TypeResolution;
 
@@ -26,7 +27,7 @@ public class CachedTypeResolver : ITypeResolver
     ///     Creates a new instance of the <see cref="CachedTypeResolver" /> class.
     /// </summary>
     /// <param name="typeResolver">
-    ///     The <see cref="Spring.Core.TypeResolution.ITypeResolver" /> that this instance will delegate
+    ///     The <see cref="ITypeResolver" /> that this instance will delegate
     ///     actual <see cref="System.Type" /> resolution to if a <see cref="System.Type" />
     ///     cannot be found in this instance's <see cref="System.Type" /> cache.
     /// </param>

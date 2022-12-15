@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using DataDynamics.Common.Spring.Reflection;
-using DataDynamics.Common.Utils;
+using DataDynamics.Common.Spring.TypeResolution;
+using DataDynamics.Common.Spring.Utils;
 
 namespace DataDynamics.Common.Spring.Resources;
 

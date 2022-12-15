@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using System.Net;
-using DataDynamics.Common.Utils;
+using DataDynamics.Common.Spring.Utils;
 
 namespace DataDynamics.Common.Spring.Resources;
 

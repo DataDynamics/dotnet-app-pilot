@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using DataDynamics.Common.Spring.Resources;
+using DataDynamics.Common.Spring.Utils;
 using DataDynamics.Common.Utils;
 using log4net;
 using log4net.Config;
@@ -9,7 +10,6 @@ namespace DataDynamics.App;
 
 internal static class Program
 {
-
     private static readonly ILog logger = LogManager.GetLogger(typeof(Program));
 
     /// <summary>
@@ -18,15 +18,9 @@ internal static class Program
     [STAThread]
     static void Main()
     {
-
-        Console.WriteLine(AssemblyName.GetAssemblyName(@".\DataDynamics.App.dll"));
-        Type t = typeof(Program);
-        string s = t.Assembly.FullName.ToString();
-        Console.WriteLine("The fully qualified assembly name " +
-                          "containing the specified class is {0}.", s);
-
         IResourceLoader loader = new ConfigurableResourceLoader();
-        var resource = loader.GetResource("assembly://DataDynamics.App/Config/log4net.config");
+        var resource = loader.GetResource("Config/log4net.config");
+        Console.Out.WriteLine(IOUtils.ToString(resource));
         Console.Out.WriteLine(resource);
         XmlConfigurator.Configure(resource.File);
 

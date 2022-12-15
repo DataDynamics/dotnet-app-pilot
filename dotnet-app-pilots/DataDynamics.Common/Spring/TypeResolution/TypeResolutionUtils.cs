@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using DataDynamics.Common.Spring.Utils;
 
 namespace DataDynamics.Common.Spring.TypeResolution;
 
@@ -29,7 +30,7 @@ public sealed class TypeResolutionUtils
     // CLOVER:OFF
 
     /// <summary>
-    ///     Creates a new instance of the <see cref="Spring.Core.TypeResolution.TypeResolutionUtils" /> class.
+    ///     Creates a new instance of the <see cref="TypeResolutionUtils" /> class.
     /// </summary>
     /// <remarks>
     ///     <p>
@@ -54,7 +55,7 @@ public sealed class TypeResolutionUtils
     ///     <p>
     ///         If you require special <see cref="System.Type" /> resolution, do
     ///         <b>not</b> use this method, but rather instantiate
-    ///         your own <see cref="Spring.Core.TypeResolution.TypeResolver" />.
+    ///         your own <see cref="TypeResolver" />.
     ///     </p>
     /// </remarks>
     /// <param name="typeName">

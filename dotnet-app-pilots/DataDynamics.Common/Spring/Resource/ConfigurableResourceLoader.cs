@@ -1,5 +1,5 @@
 using System;
-using DataDynamics.Common.Utils;
+using DataDynamics.Common.Spring.Utils;
 
 namespace DataDynamics.Common.Spring.Resources;
 

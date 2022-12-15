@@ -1,12 +1,13 @@
 ﻿using System;
 using System.IO;
+using DataDynamics.Common.Spring.Resources;
 
 namespace DataDynamics.Common.Spring.Utils;
 
 /// <summary>
 ///     Utility methods for IO handling
 /// </summary>
-internal sealed class IOUtils
+public sealed class IOUtils
 {
     private IOUtils()
     {
@@ -41,5 +42,32 @@ internal sealed class IOUtils
         CopyStream(src, stm);
         stm.Close();
         return stm.ToArray();
+    }
+
+    /// <summary>
+    ///     Reads a stream into a string.
+    /// </summary>
+    /// <remarks>
+    ///     Does not close the input stream!
+    /// </remarks>
+    public static string ToString(Stream src)
+    {
+        var stm = new MemoryStream();
+        CopyStream(src, stm);
+        stm.Close();
+        byte[] buffer = stm.ToArray();
+        return System.Text.Encoding.UTF8.GetString(buffer, 0, buffer.Length);
+    }
+
+    /// <summary>
+    ///     Reads a resource into a string.
+    /// </summary>
+    /// <remarks>
+    ///     Does not close the input stream!
+    /// </remarks>
+    public static string ToString(IResource resource)
+    {
+        Stream src = resource.InputStream;
+        return ToString(src);
     }
 }
