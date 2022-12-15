@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Config.Net.Yaml" Version="5.1.5" />
+    <PackageReference Include="SmartSql" Version="4.1.64" />
+    <PackageReference Include="SmartSql.Bulk.PostgreSql" Version="4.1.64" />
+    <PackageReference Include="SmartSql.DyRepository" Version="4.1.64" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DataDynamics.Common\DataDynamics.Common.csproj" />
   </ItemGroup>
 
@@ -27,9 +34,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Config\config.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Config\log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
 
 </Project>
