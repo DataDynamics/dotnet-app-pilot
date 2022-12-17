@@ -5,7 +5,8 @@
 		IsWatchConfigFile="true" />
 	<Database>
 		<DbProvider Name="MySqlClientFactory" ParameterPrefix="?" Type="MySql.Data.MySqlClient.MySqlClientFactory,MySql.Data" />
-		<Write Name="WriteDB" ConnectionString="Data Source=localhost;database=SmartSqlStarterDB;uid=root;pwd=SmartSql.Net;CharSet=utf8;" />
+		<Write Name="WriteDB"
+		       ConnectionString="Data Source=localhost;database=SmartSqlStarterDB;uid=root;pwd=SmartSql.Net;CharSet=utf8;" />
 	</Database>
 	<TypeHandlers>
 		<TypeHandler Name="Json" Type="SmartSql.TypeHandler.JsonTypeHandler,SmartSql.TypeHandler" />

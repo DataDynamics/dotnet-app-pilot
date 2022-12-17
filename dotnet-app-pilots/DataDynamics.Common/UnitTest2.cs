@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace DataDynamics.Common;
 
-public class UnitTest1
+public class UnitTest2
 {
     [SetUp]
     public void Setup()
