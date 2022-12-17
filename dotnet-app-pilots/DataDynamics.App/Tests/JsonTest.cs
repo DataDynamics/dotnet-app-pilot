@@ -11,13 +11,6 @@ public class JsonTest
     }
 
     [Test]
-    public void LoadJson()
-    {
-        var json = File.ReadAllText("Config/config.json");
-        Assert.IsNotEmpty(json);
-    }
-
-    [Test]
     public void GetValue()
     {
         var json = File.ReadAllText("Tests/config.json");

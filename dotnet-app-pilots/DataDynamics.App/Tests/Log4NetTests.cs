@@ -13,17 +13,7 @@ public class Log4NetTests
     }
 
     [Test]
-    public void LoadJson()
-    {
-        IResourceLoader loader = new ConfigurableResourceLoader();
-        var resource = loader.GetResource("Config/log4net.config");
-        XmlConfigurator.Configure(resource.File);
-
-        Assert.Pass();
-    }
-
-    [Test]
-    public void GetValue()
+    public void Init()
     {
         IResourceLoader loader = new ConfigurableResourceLoader();
         var resource = loader.GetResource("Tests/log4net.config");
