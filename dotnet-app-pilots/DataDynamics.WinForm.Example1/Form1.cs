@@ -15,6 +15,8 @@ namespace DataDynamics.WinForm.Example1
             tChart1.Panel.Gradient.Visible = false;
             tChart1.Walls.Back.Transparent = true;
 
+            // https://steema.com/docs/teechart/net/tutorials/html/TeeChartProNetTutorialsContentsTutorial6-WorkingwithSeries.htm
+
             /*
              * 샘플 데이터를 추가한다.
              */
