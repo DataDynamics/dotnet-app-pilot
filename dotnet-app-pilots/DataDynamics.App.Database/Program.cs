@@ -1,4 +1,6 @@
-﻿namespace DataDynamics.App.Database;
+﻿using System.Configuration;
+
+namespace DataDynamics.App.Database;
 
 internal static class Program
 {
@@ -8,5 +10,8 @@ internal static class Program
     [STAThread]
     private static void Main(string[] args)
     {
+
+        string appName = ConfigurationManager.AppSettings["AppName"];
+        Console.Out.WriteLine(appName);
     }
 }
