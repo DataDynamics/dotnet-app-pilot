@@ -309,4 +309,70 @@ public class LangTests
         // https://learn.microsoft.com/ko-kr/dotnet/api/system.string.format?view=net-7.0
     }
 
+    [Test]
+    public void Exception1()
+    {
+        int x = 0;
+        try
+        {
+            int y = 100 / x;
+        }
+        catch (ArithmeticException e)
+        {
+            Console.WriteLine($"ArithmeticException Handler: {e}");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Generic Exception Handler: {e}");
+        }
+    }
+
+    [Test]
+    public void Exception2()
+    {
+        int x = 0;
+        try
+        {
+            int y = 100 / x;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("An exception ({0}) occurred.", e.GetType().Name);
+            Console.WriteLine("Message:\n   {0}\n", e.Message);
+            Console.WriteLine("Stack Trace:\n   {0}\n", e.StackTrace);
+        }
+    }
+    [Test]
+    public void InnerException()
+    {
+        // https://learn.microsoft.com/ko-kr/dotnet/api/system.exception?view=net-7.0
+
+        int x = 0;
+        try
+        {
+            try
+            {
+                int y = 100 / x;
+            }
+            catch (Exception e)
+            {
+                throw new InvalidCastException("0으로 나누기 하지 마세요...", e);
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("An exception ({0}) occurred.", e.GetType().Name);
+            Console.WriteLine("   Message:\n{0}", e.Message);
+            Console.WriteLine("   Stack Trace:\n   {0}", e.StackTrace);
+            Exception ie = e.InnerException;
+            if (ie != null)
+            {
+                Console.WriteLine("   The Inner Exception:");
+                Console.WriteLine("      Exception Name: {0}", ie.GetType().Name);
+                Console.WriteLine("      Message: {0}\n", ie.Message);
+                Console.WriteLine("      Stack Trace:\n   {0}\n", ie.StackTrace);
+            }
+        }
+    }
+
 }
