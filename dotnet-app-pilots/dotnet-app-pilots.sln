@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataDynamics.App", "DataDyn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataDynamics.WinForm.Example1", "DataDynamics.WinForm.Example1\DataDynamics.WinForm.Example1.csproj", "{60826B47-C066-4452-B74B-200B5ED82E36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataDynamics.WinForm.PictureViewer", "DataDynamics.WinForm.PictureViewer\DataDynamics.WinForm.PictureViewer.csproj", "{4F28F82B-B19A-4CAE-9A8C-070EA2C53D51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{60826B47-C066-4452-B74B-200B5ED82E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60826B47-C066-4452-B74B-200B5ED82E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60826B47-C066-4452-B74B-200B5ED82E36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F28F82B-B19A-4CAE-9A8C-070EA2C53D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F28F82B-B19A-4CAE-9A8C-070EA2C53D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F28F82B-B19A-4CAE-9A8C-070EA2C53D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F28F82B-B19A-4CAE-9A8C-070EA2C53D51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
