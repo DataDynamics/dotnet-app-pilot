@@ -749,6 +749,7 @@
             this.tChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.tChart1.Axes.Top.UseMaxPixelPos = true;
             this.tChart1.BackColor = System.Drawing.Color.Transparent;
+            this.tChart1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tChart1.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
             // 
@@ -1196,7 +1197,7 @@
             this.tChart1.Walls.Bottom.Brush.Gradient.StartColor = System.Drawing.Color.Gray;
             this.tChart1.Walls.Bottom.Brush.Gradient.Visible = true;
             this.tChart1.Walls.Bottom.Brush.Solid = true;
-            this.tChart1.Walls.Bottom.Brush.Visible = true;
+            this.tChart1.Walls.Bottom.Brush.Visible = false;
             // 
             // 
             // 
@@ -1238,7 +1239,7 @@
             this.tChart1.Walls.Left.Brush.Gradient.StartColor = System.Drawing.Color.Gray;
             this.tChart1.Walls.Left.Brush.Gradient.Visible = true;
             this.tChart1.Walls.Left.Brush.Solid = true;
-            this.tChart1.Walls.Left.Brush.Visible = true;
+            this.tChart1.Walls.Left.Brush.Visible = false;
             // 
             // 
             // 
@@ -1303,7 +1304,6 @@
             this.tChart1.Zoom.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.tChart1.Zoom.Brush.Solid = true;
             this.tChart1.Zoom.Brush.Visible = false;
-            this.tChart1.DoubleClick += new System.EventHandler(this.tChart1_DoubleClick);
             // 
             // line1
             // 
@@ -1379,7 +1379,7 @@
             // 
             // 
             this.line1.Marks.Arrow.Visible = false;
-            this.line1.Marks.ArrowLength = 0;
+            this.line1.Marks.ArrowLength = 8;
             // 
             // 
             // 
@@ -1397,7 +1397,7 @@
             // 
             // 
             // 
-            this.line1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
+            this.line1.Marks.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.line1.Marks.Font.Brush.Solid = true;
             this.line1.Marks.Font.Brush.Visible = true;
             this.line1.Marks.Font.Name = "Roboto";
@@ -1424,10 +1424,14 @@
             // 
             // 
             // 
+            this.line1.Marks.Pen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(138)))), ((int)(((byte)(92)))));
             // 
             // 
             // 
-            this.line1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
+            // 
+            // 
+            // 
+            this.line1.Marks.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.line1.Marks.Shadow.Brush.Solid = true;
             this.line1.Marks.Shadow.Brush.Visible = true;
             // 
@@ -1468,8 +1472,7 @@
             this.line1.Marks.TailParams.Margin = 0F;
             this.line1.Marks.TailParams.PointerHeight = 8D;
             this.line1.Marks.TailParams.PointerWidth = 8D;
-            this.line1.Marks.Transparent = true;
-            this.line1.OriginalCursor = null;
+            this.line1.OriginalCursor = System.Windows.Forms.Cursors.Default;
             // 
             // 
             // 
@@ -1488,6 +1491,7 @@
             // 
             // 
             this.line1.Pointer.Pen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
+            this.line1.Pointer.Pen.Transparency = 2;
             this.line1.Pointer.Pen.Width = 3;
             this.line1.Pointer.SizeDouble = 0D;
             this.line1.Pointer.SizeUnits = Steema.TeeChart.Styles.PointerSizeUnits.Pixels;
@@ -1586,9 +1590,8 @@
             // 
             // 
             // 
-            this.line2.Marks.Arrow.Transparency = 2;
             this.line2.Marks.Arrow.Visible = false;
-            this.line2.Marks.ArrowLength = 0;
+            this.line2.Marks.ArrowLength = 8;
             // 
             // 
             // 
@@ -1596,11 +1599,7 @@
             // 
             // 
             // 
-            this.line2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(224)))));
-            // 
-            // 
-            // 
-            this.line2.Marks.Brush.Gradient.Transparency = 2;
+            this.line2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.line2.Marks.Brush.Solid = true;
             this.line2.Marks.Brush.Visible = true;
             // 
@@ -1610,11 +1609,7 @@
             // 
             // 
             // 
-            this.line2.Marks.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            // 
-            // 
-            // 
-            this.line2.Marks.Font.Brush.Gradient.Transparency = 2;
+            this.line2.Marks.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.line2.Marks.Font.Brush.Solid = true;
             this.line2.Marks.Font.Brush.Visible = true;
             this.line2.Marks.Font.Name = "Roboto";
@@ -1641,18 +1636,14 @@
             // 
             // 
             // 
-            this.line2.Marks.Pen.Transparency = 2;
+            this.line2.Marks.Pen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(230)))));
             // 
             // 
             // 
             // 
             // 
             // 
-            this.line2.Marks.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            // 
-            // 
-            // 
-            this.line2.Marks.Shadow.Brush.Gradient.Transparency = 2;
+            this.line2.Marks.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.line2.Marks.Shadow.Brush.Solid = true;
             this.line2.Marks.Shadow.Brush.Visible = true;
             // 
@@ -1693,8 +1684,7 @@
             this.line2.Marks.TailParams.Margin = 0F;
             this.line2.Marks.TailParams.PointerHeight = 8D;
             this.line2.Marks.TailParams.PointerWidth = 8D;
-            this.line2.Marks.Transparent = true;
-            this.line2.OriginalCursor = null;
+            this.line2.OriginalCursor = System.Windows.Forms.Cursors.Default;
             // 
             // 
             // 
@@ -1809,7 +1799,7 @@
             // 
             // 
             this.line3.Marks.Arrow.Visible = false;
-            this.line3.Marks.ArrowLength = 0;
+            this.line3.Marks.ArrowLength = 8;
             // 
             // 
             // 
@@ -1827,7 +1817,7 @@
             // 
             // 
             // 
-            this.line3.Marks.Font.Brush.Color = System.Drawing.Color.Black;
+            this.line3.Marks.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.line3.Marks.Font.Brush.Solid = true;
             this.line3.Marks.Font.Brush.Visible = true;
             this.line3.Marks.Font.Name = "Roboto";
@@ -1854,10 +1844,14 @@
             // 
             // 
             // 
+            this.line3.Marks.Pen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(230)))), ((int)(((byte)(115)))));
             // 
             // 
             // 
-            this.line3.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
+            // 
+            // 
+            // 
+            this.line3.Marks.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.line3.Marks.Shadow.Brush.Solid = true;
             this.line3.Marks.Shadow.Brush.Visible = true;
             // 
@@ -1898,8 +1892,7 @@
             this.line3.Marks.TailParams.Margin = 0F;
             this.line3.Marks.TailParams.PointerHeight = 8D;
             this.line3.Marks.TailParams.PointerWidth = 8D;
-            this.line3.Marks.Transparent = true;
-            this.line3.OriginalCursor = null;
+            this.line3.OriginalCursor = System.Windows.Forms.Cursors.Default;
             // 
             // 
             // 

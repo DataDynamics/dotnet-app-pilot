@@ -15,7 +15,7 @@ namespace DataDynamics.WinForm.Example1
             tChart1.Panel.Gradient.Visible = false;
             tChart1.Walls.Back.Transparent = true;
 
-            // https://steema.com/docs/teechart/net/tutorials/html/TeeChartProNetTutorialsContentsTutorial6-WorkingwithSeries.htm
+            // https://steema.com/docs/teechart/net/tutorials/html/TeeChartProNetTutorialsContentsTutorial1-GettingStarted.htm
 
             /*
              * 샘플 데이터를 추가한다.
@@ -25,9 +25,5 @@ namespace DataDynamics.WinForm.Example1
             tChart1[2].FillSampleValues(11);
         }
 
-        private void tChart1_DoubleClick(object sender, EventArgs e)
-        {
-            tChart1.ShowEditor();
-        }
     }
 }
