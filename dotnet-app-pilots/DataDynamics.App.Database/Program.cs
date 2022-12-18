@@ -1,9 +1,7 @@
 ﻿using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using SmartSql;
-using SmartSql.Configuration;
 using SmartSql.Data;
-using SmartSql.Utils;
 
 namespace DataDynamics.App.Database;
 
@@ -15,7 +13,7 @@ internal static class Program
     [STAThread]
     private static void Main(string[] args)
     {
-        string appName = ConfigurationManager.AppSettings["AppName"];
+        var appName = ConfigurationManager.AppSettings["AppName"];
         Console.Out.WriteLine(appName);
 
         var context = new CustomerRepository();
@@ -30,29 +28,20 @@ internal static class Program
         ///
         /// ORM으로 호출
         /// 
-        foreach (var c in context.Customers)
-        {
-            Console.Out.WriteLine(c.FullName);
-        }
+        foreach (var c in context.Customers) Console.Out.WriteLine(c.FullName);
 
         ///
         /// SQL을 직접 호출
         /// 
         var output1 = context.Customers.FromSql($"select * from customers limit 1").ToList();
-        foreach (var c in output1)
-        {
-            Console.Out.WriteLine(c.FullName);
-        }
+        foreach (var c in output1) Console.Out.WriteLine(c.FullName);
 
         ///
         /// 매개변수 전달
         /// 
         var pk = 1;
         var output2 = context.Customers.FromSql($"select * from customers where id = {pk}").ToList();
-        foreach (var c in output2)
-        {
-            Console.Out.WriteLine(c.FullName);
-        }
+        foreach (var c in output2) Console.Out.WriteLine(c.FullName);
 
         var customerSqlRepository = new CustomerSqlRepository();
         customerSqlRepository.Insert(1000, "Hello World");
@@ -71,9 +60,6 @@ internal static class Program
             SqlId = "GetCustomers"
         });
 
-        foreach (var c in resultset)
-        {
-            Console.Out.WriteLine(c["full_name"]);
-        }
+        foreach (var c in resultset) Console.Out.WriteLine(c["full_name"]);
     }
 }

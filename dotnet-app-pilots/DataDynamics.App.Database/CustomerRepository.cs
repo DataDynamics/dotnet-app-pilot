@@ -23,8 +23,7 @@ public class CustomerRepository : DbContext
 [Table("customers", Schema = "public")]
 public class Customer
 {
-    [Column("id")]
-    public long Id { get; set; }
-    [Column("full_name")]
-    public string FullName { get; set; }
+    [Column("id")] public long Id { get; set; }
+
+    [Column("full_name")] public string FullName { get; set; }
 }

@@ -9,7 +9,7 @@ public class CustomerSqlRepository
 {
     private static readonly ILog logger = LogManager.GetLogger(typeof(CustomerSqlRepository));
 
-    string connectionString;
+    private readonly string connectionString;
 
     public CustomerSqlRepository()
     {
@@ -25,10 +25,7 @@ public class CustomerSqlRepository
         {
             cmd.Parameters.AddWithValue("id", id);
             var reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                Console.Out.WriteLine(reader.GetString(1));
-            }
+            while (reader.Read()) Console.Out.WriteLine(reader.GetString(1));
         }
     }
 
@@ -39,11 +36,8 @@ public class CustomerSqlRepository
         using var dataSource = dataSourceBuilder.Build();
 
         var cmd = dataSource.CreateCommand("SELECT * from customers");
-        Npgsql.NpgsqlDataReader reader = cmd.ExecuteReader();
-        while (reader.Read())
-        {
-            Console.Out.WriteLine(reader.GetValue(1));
-        }
+        var reader = cmd.ExecuteReader();
+        while (reader.Read()) Console.Out.WriteLine(reader.GetValue(1));
     }
 
     public void Insert(long id, string fullName)
