@@ -1,6 +1,5 @@
 ﻿using System.Configuration;
 using Microsoft.EntityFrameworkCore;
-using SmartSql.Data;
 
 namespace DataDynamics.App.Database;
 
@@ -50,5 +49,9 @@ internal static class Program
         {
             Console.Out.WriteLine(c.FullName);
         }
+
+        var customerSqlRepository = new CustomerSqlRepository();
+        customerSqlRepository.Insert(1000, "Hello World");
+        customerSqlRepository.FindAll();
     }
 }
