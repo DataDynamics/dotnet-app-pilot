@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SmartSqlMapConfig xmlns="http://SmartSql.net/schemas/SmartSqlMapConfig.xsd">
+	<Settings IsWatchConfigFile="true" />
+
+	<Properties>
+		<Property Name="JsonTypeHandler" Value="SmartSql.TypeHandler.JsonTypeHandler,SmartSql.TypeHandler"/>
+	</Properties>
+
+	<Database>
+		<!--ParameterPrefix:[SqlServer:@ | MySQL:? |Oracle::|Postgresql:@] -->
+		<DbProvider Name="SqlClientFactory" ParameterPrefix="@" Type="Npgsql.NpgsqlFactory,Npgsql"/>
+		<Write Name="WriteDB" ConnectionString="Server=localhost;Port=5432;User Id=postgres;Password=Clave:123; Database=test;"/>
+	</Database>
+
+	<TypeHandlers>
+		<TypeHandler Name="Json" Type="SmartSql.TypeHandler.JsonTypeHandler,SmartSql.TypeHandler">
+			<Properties>
+				<Property Name="DateFormat" Value="yyyy-MM-dd mm:ss"/>
+				<Property Name="NamingStrategy" Value="Camel"/>
+			</Properties>
+		</TypeHandler>
+		<TypeHandler Name="Xml" Type="SmartSql.TypeHandler.XmlTypeHandler,SmartSql.TypeHandler"/>
+	</TypeHandlers>
+
+	<SmartSqlMaps>
+		<SmartSqlMap Path="Maps" Type="Directory"></SmartSqlMap>
+	</SmartSqlMaps>
+</SmartSqlMapConfig>

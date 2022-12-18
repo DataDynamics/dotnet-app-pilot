@@ -1,5 +1,9 @@
 ﻿using System.Configuration;
 using Microsoft.EntityFrameworkCore;
+using SmartSql;
+using SmartSql.Configuration;
+using SmartSql.Data;
+using SmartSql.Utils;
 
 namespace DataDynamics.App.Database;
 
@@ -53,5 +57,23 @@ internal static class Program
         var customerSqlRepository = new CustomerSqlRepository();
         customerSqlRepository.Insert(1000, "Hello World");
         customerSqlRepository.FindAll();
+
+        // var xmlDoc = ResourceUtil.LoadFileAsXml("SmartSqlConfig.xml");
+
+        var mapper = new SmartSqlBuilder()
+            .UseXmlConfig()
+            .Build()
+            .GetSqlMapper();
+
+        var resultset = mapper.Query<DynamicRow>(new RequestContext
+        {
+            Scope = nameof(User),
+            SqlId = "GetCustomers"
+        });
+
+        foreach (var c in resultset)
+        {
+            Console.Out.WriteLine(c["full_name"]);
+        }
     }
 }
