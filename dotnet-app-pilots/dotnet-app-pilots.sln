@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataDynamics.Common", "DataDynamics.Common\DataDynamics.Common.csproj", "{C07E8434-61E2-41A0-B39E-41E152BFBE6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataDynamics.Common", "DataDynamics.Common\DataDynamics.Common.csproj", "{C07E8434-61E2-41A0-B39E-41E152BFBE6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataDynamics.App", "DataDynamics.App\DataDynamics.App.csproj", "{C1774B35-4FB0-48A2-B73D-A27E754C9ACD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataDynamics.App", "DataDynamics.App\DataDynamics.App.csproj", "{C1774B35-4FB0-48A2-B73D-A27E754C9ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataDynamics.WinForm.Example1", "DataDynamics.WinForm.Example1\DataDynamics.WinForm.Example1.csproj", "{60826B47-C066-4452-B74B-200B5ED82E36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C1774B35-4FB0-48A2-B73D-A27E754C9ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1774B35-4FB0-48A2-B73D-A27E754C9ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1774B35-4FB0-48A2-B73D-A27E754C9ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60826B47-C066-4452-B74B-200B5ED82E36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60826B47-C066-4452-B74B-200B5ED82E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60826B47-C066-4452-B74B-200B5ED82E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60826B47-C066-4452-B74B-200B5ED82E36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
