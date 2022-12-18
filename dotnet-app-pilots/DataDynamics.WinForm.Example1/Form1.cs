@@ -10,11 +10,19 @@ namespace DataDynamics.WinForm.Example1
             InitializeComponent();
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
+        private void StockMonitoring_Load(object sender, EventArgs e)
         {
-            Console.Out.WriteLine(sender);
-            Console.Out.WriteLine(e);
-            btnTest.Text = "헬로 월드";
+            tChart1.Panel.Gradient.Visible = false;
+            tChart1.Walls.Back.Transparent = true;
+
+            tChart1[0].FillSampleValues(12);
+            tChart1[1].FillSampleValues(10);
+            tChart1[2].FillSampleValues(11);
+        }
+
+        private void tChart1_DoubleClick(object sender, EventArgs e)
+        {
+            tChart1.ShowEditor();
         }
     }
 }

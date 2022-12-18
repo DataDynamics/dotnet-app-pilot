@@ -1,7 +1,6 @@
 ﻿using System.Numerics;
 using log4net;
 using log4net.Config;
-using Microsoft.Extensions.Logging;
 using Npgsql;
 
 namespace DataDynamics.App.Database;
